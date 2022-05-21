@@ -10,28 +10,16 @@
         "LocationDescription": "Central station"
       },
       {
-        "City": "Bne Brak",
-        "StartDate": "2021-01-02T10:10:10",
-        "EndDate": "2021-01-02T10:50:10",
-        "LocationDescription": "Rabbi Akiva"
-      },
-      {
-        "City": "Elad",
-        "StartDate": "2021-01-03T10:10:10",
-        "EndDate": "2021-01-03T10:50:10",
-        "LocationDescription": "Nachlat Yzhak"
-      },
-      {
-        "City": "Tel Aviv",
-        "StartDate": "2021-01-04T10:10:10",
-        "EndDate": "2021-01-04T10:50:10",
-        "LocationDescription": "Bursa"
-      },
-      {
         "City": "Bet Shemesh",
         "StartDate": "2022-05-19T14:42:20.909Z",
         "EndDate": "2022-05-19T14:42:20.909Z",
         "LocationDescription": "Nahar Hayarden"
+      },
+      {
+        "City": "Bne Brak",
+        "StartDate": "2022-05-21T20:18:43.211Z",
+        "EndDate": "2022-05-21T20:18:43.211Z",
+        "LocationDescription": "Ibn Gvirol"
       }
     ]
   },
@@ -40,28 +28,10 @@
     "Name": "Stam",
     "Locations": [
       {
-        "City": "Jerusalem",
-        "StartDate": "2021-01-01T10:10:10",
-        "EndDate": "2021-01-01T10:50:10",
-        "LocationDescription": "Central station"
-      },
-      {
         "City": "Bne Brak",
         "StartDate": "2021-01-02T10:10:10",
         "EndDate": "2021-01-02T10:50:10",
         "LocationDescription": "Rabbi Akiva"
-      },
-      {
-        "City": "Elad",
-        "StartDate": "2021-01-03T10:10:10",
-        "EndDate": "2021-01-03T10:50:10",
-        "LocationDescription": "Nachlat Yzhak"
-      },
-      {
-        "City": "Tel Aviv",
-        "StartDate": "2021-01-04T10:10:10",
-        "EndDate": "2021-01-04T10:50:10",
-        "LocationDescription": "Bursa"
       }
     ]
   },
