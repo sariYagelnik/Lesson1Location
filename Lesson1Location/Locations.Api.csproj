@@ -1,7 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Location.Api</RootNamespace>
+    <AssemblyName>Location.Api</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj" />
+    <ProjectReference Include="..\CoronaApp.Services\CoronaApp.Services.csproj" />
+    <ProjectReference Include="..\DAL\CoronaApp.Dal.csproj" />
   </ItemGroup>
 
 </Project>

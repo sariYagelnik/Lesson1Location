@@ -1,4 +1,5 @@
-using DAL.Repositories;
+using CoronaApp.Services.Models;
+using CoronaApp.Services.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lesson1Location
+namespace Locations.Api
 {
     public class Startup
     {
@@ -27,7 +28,10 @@ namespace Lesson1Location
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IDB, DB>();
             services.AddScoped<ILocationRepository, LocationRepository>();
+            services.AddScoped<ILogger, Logger<ILoggerFactory>>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

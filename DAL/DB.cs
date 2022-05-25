@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Lesson1Location.Models
+namespace CoronaApp.Services.Models
 {
-    public static class DB
+    public class DB: IDB
     {
-        public static List<Patient> Patients { get; set; }
-            //= new List<Patient>();
-        static DB()
+        public List<Patient> Patients { get; set; }
+        public DB()
         {
+            //string srcJsonFile ="../../"
             using (StreamReader r = new StreamReader("data.json"))
             {
                 string json = r.ReadToEnd();
