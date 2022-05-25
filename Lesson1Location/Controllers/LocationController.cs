@@ -1,5 +1,5 @@
-﻿using DAL.Repositories;
-using Lesson1Location.Models;
+﻿using CoronaApp.Services.Repositories;
+using CoronaApp.Services.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,41 +8,44 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
-namespace Lesson1Location.Controllers
+namespace Locations.Api.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class LocationController : ControllerBase
     {
-        private readonly ILocationRepository _locationRepository; 
-        public LocationController(ILocationRepository locationRepository)
+        private readonly ILocationRepository _locationRepository;
+        private readonly ILogger _logger;
+        public LocationController(ILocationRepository locationRepository, ILogger logger)
         {
             _locationRepository = locationRepository;
+            _logger = logger;
         }
         [HttpGet]
-        public IEnumerable<Models.Location> GetAllLocations()
+        public async Task<IEnumerable<Location>> Get()
         {
-            return _locationRepository.GetAllLocations();
+            return await _locationRepository.GetAllLocations();
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Models.Location> GetLocationsByUserId(string id)
+        public async Task<IEnumerable<Location>> Get(string id)
         {
-            return _locationRepository.GetLocationById(id);
+            return await _locationRepository.GetLocationById(id);
         }
 
         [HttpPost("{id}")]
-        public ActionResult AddLocationToPatient(string id, [FromBody] List<Models.Location> location)
+        public async Task<CreatedResult> Post(string id, [FromBody] List<Location> location)
         {
-            IEnumerable<Location> newLocations = _locationRepository.CreateLocation(id, location);
-            return CreatedAtAction(nameof(GetAllLocations), new { id= id, newLocations});
+            Task<IEnumerable<Location>> newLocations = _locationRepository.CreateLocation(id, location);
+            return await Task.FromResult(Created(id, location));
         }
 
-        [HttpGet("{city}")]
-        public IEnumerable<Models.Location> GetLocationsByCityName(string city)
+        [HttpGet("city/{city}")]
+        public async Task<IEnumerable<Location>> GetByCity(string city)
         {
-            return _locationRepository.GetLocationsByCity(city);
+            return await _locationRepository.GetLocationsByCity(city);
         }
     }
 }
