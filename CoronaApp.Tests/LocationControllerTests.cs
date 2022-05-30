@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
-using Xunit;
+using Xunit; 
 
 namespace CoronaApp.Tests
 {
@@ -30,10 +30,10 @@ namespace CoronaApp.Tests
         [Fact]
         public async void AddLocations_ById_Added()
         {
-            List<Location> locationsToAdd = new List<Location>(new Location[] {
-                new Location { City = "Ramat Gan", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
-                new Location { City = "Ramat Gan", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
-                new Location { City = "Ramat Gan", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
+            List<CoronaApp.Services.Models.Location> locationsToAdd = new List<CoronaApp.Services.Models.Location>(new CoronaApp.Services.Models.Location[] {
+                new CoronaApp.Services.Models.Location { City = "aaaaaaaaa", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
+                new CoronaApp.Services.Models.Location { City = "aaaaaaa", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
+                new CoronaApp.Services.Models.Location { City = "aaaaa", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
             });
 
             var request = new
@@ -50,10 +50,10 @@ namespace CoronaApp.Tests
         [Fact]
         public async void AddWrongLocations_ById_NotAdded()
         {
-            List<Location> locationsToAdd = new List<Location>(new Location[] {
-                new Location { StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
-                new Location { City = "Ramat Gan", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
-                new Location { City = "Ramat Gan", EndDate = DateTime.Now, LocationDescription = "" },
+            List<CoronaApp.Services.Models.Location> locationsToAdd = new List<CoronaApp.Services.Models.Location>(new CoronaApp.Services.Models.Location[] {
+                new CoronaApp.Services.Models.Location { StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
+                new CoronaApp.Services.Models.Location { City = "Ramat Gan", StartDate = DateTime.Now, EndDate = DateTime.Now, LocationDescription = "Leumi Park" },
+                new CoronaApp.Services.Models.Location { City = "Ramat Gan", EndDate = DateTime.Now, LocationDescription = "" },
             });
 
             var request = new

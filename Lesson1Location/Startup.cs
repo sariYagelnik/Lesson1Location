@@ -30,8 +30,7 @@ namespace Locations.Api
         {
             services.AddScoped<IDB, DB>();
             services.AddScoped<ILocationRepository, LocationRepository>();
-            services.AddScoped<ILogger, Logger<ILoggerFactory>>();
-
+            services.AddScoped<IPatientRepository, PatintRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

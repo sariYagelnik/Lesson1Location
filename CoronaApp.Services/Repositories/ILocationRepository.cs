@@ -9,9 +9,15 @@ namespace CoronaApp.Services.Repositories
 {
     public interface ILocationRepository
     {
-        Task<IEnumerable<Location>> GetAllLocations();
-        Task<IEnumerable<Location>> GetLocationById(string id);
-        Task<IEnumerable<Location>> GetLocationsByCity(string city);
-        Task<IEnumerable<Location>> CreateLocation(string id, IEnumerable<Location> location);
+        Task<IEnumerable<Location>> GetAllLocationsAsync();
+        Task<IEnumerable<Location>> GetLocationByIdAsync(string id);
+        Task<IEnumerable<Location>> GetLocationsByCityAsync(string city);
+        Task<IEnumerable<Location>> CreateLocationAsync(string id, IEnumerable<Location> location);
+
+
+        //Task<IEnumerable<Location>> Get(LocationSearch locationSearch);
+        //Task<IEnumerable<Location>> GetLocationById(LocationSearch locationSearch, string id);
+        //Task<IEnumerable<Location>> GetLocationsByCity(LocationSearch locationSearch, string city);
+        //Task<IEnumerable<Location>> CreateLocation(LocationSearch locationSearch, string id, IEnumerable<Location> location);
     }
 }

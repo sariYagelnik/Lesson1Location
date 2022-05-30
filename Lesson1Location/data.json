@@ -4,12 +4,6 @@
     "Name": "Reuven Shimoni",
     "Locations": [
       {
-        "City": "Jerusalem",
-        "StartDate": "2021-01-01T10:10:10",
-        "EndDate": "2021-01-01T10:50:10",
-        "LocationDescription": "Central station"
-      },
-      {
         "City": "Bet Shemesh",
         "StartDate": "2022-05-19T14:42:20.909Z",
         "EndDate": "2022-05-19T14:42:20.909Z",
@@ -20,12 +14,6 @@
         "StartDate": "2022-05-21T20:18:43.211Z",
         "EndDate": "2022-05-21T20:18:43.211Z",
         "LocationDescription": "Ibn Gvirol"
-      },
-      {
-        "City": "string",
-        "StartDate": "2022-05-24T12:16:20.52Z",
-        "EndDate": "2022-05-24T12:16:20.52Z",
-        "LocationDescription": "string"
       }
     ]
   },
@@ -38,12 +26,6 @@
         "StartDate": "2021-01-02T10:10:10",
         "EndDate": "2021-01-02T10:50:10",
         "LocationDescription": "Rabbi Akiva"
-      },
-      {
-        "City": "aaaaa",
-        "StartDate": "2022-05-24T12:19:15.63Z",
-        "EndDate": "2022-05-24T12:19:15.63Z",
-        "LocationDescription": "aaaa"
       },
       {
         "City": "Ashdod",
@@ -64,18 +46,6 @@
         "LocationDescription": "Rabbi Akiva"
       },
       {
-        "City": "Tel Aviv",
-        "StartDate": "2022-05-24T13:10:41.018Z",
-        "EndDate": "2022-05-24T13:10:41.018Z",
-        "LocationDescription": "Herzel"
-      },
-      {
-        "City": "Jerusalem",
-        "StartDate": "2021-01-01T10:10:10",
-        "EndDate": "2021-01-01T10:50:10",
-        "LocationDescription": "Central station"
-      },
-      {
         "City": "Bet Shemesh",
         "StartDate": "2022-05-19T14:42:20.909Z",
         "EndDate": "2022-05-19T14:42:20.909Z",
@@ -88,46 +58,10 @@
         "LocationDescription": "Ibn Gvirol"
       },
       {
-        "City": "string",
-        "StartDate": "2022-05-24T12:16:20.52Z",
-        "EndDate": "2022-05-24T12:16:20.52Z",
-        "LocationDescription": "string"
-      },
-      {
-        "City": "Bne Brak",
-        "StartDate": "2021-01-02T10:10:10",
-        "EndDate": "2021-01-02T10:50:10",
-        "LocationDescription": "Rabbi Akiva"
-      },
-      {
-        "City": "aaaaa",
-        "StartDate": "2022-05-24T12:19:15.63Z",
-        "EndDate": "2022-05-24T12:19:15.63Z",
-        "LocationDescription": "aaaa"
-      },
-      {
-        "City": "Jerusalem",
-        "StartDate": "2021-01-01T10:10:10",
-        "EndDate": "2021-01-01T10:50:10",
-        "LocationDescription": "Central station"
-      },
-      {
-        "City": "Bne Brak",
-        "StartDate": "2021-01-02T10:10:10",
-        "EndDate": "2021-01-02T10:50:10",
-        "LocationDescription": "Rabbi Akiva"
-      },
-      {
         "City": "Elad",
         "StartDate": "2021-01-03T10:10:10",
         "EndDate": "2021-01-03T10:50:10",
         "LocationDescription": "Nachlat Yzhak"
-      },
-      {
-        "City": "Tel Aviv",
-        "StartDate": "2021-01-04T10:10:10",
-        "EndDate": "2021-01-04T10:50:10",
-        "LocationDescription": "Bursa"
       }
     ]
   },
@@ -136,18 +70,6 @@
     "Name": "Sara",
     "Locations": [
       {
-        "City": "Jerusalem",
-        "StartDate": "2021-01-01T10:10:10",
-        "EndDate": "2021-01-01T10:50:10",
-        "LocationDescription": "Central station"
-      },
-      {
-        "City": "Bne Brak",
-        "StartDate": "2021-01-02T10:10:10",
-        "EndDate": "2021-01-02T10:50:10",
-        "LocationDescription": "Rabbi Akiva"
-      },
-      {
         "City": "Elad",
         "StartDate": "2021-01-03T10:10:10",
         "EndDate": "2021-01-03T10:50:10",
@@ -158,48 +80,24 @@
         "StartDate": "2021-01-04T10:10:10",
         "EndDate": "2021-01-04T10:50:10",
         "LocationDescription": "Bursa"
-      },
-      {
-        "City": "rrrr",
-        "StartDate": "2022-05-24T17:02:43.976Z",
-        "EndDate": "2022-05-24T17:02:43.976Z",
-        "LocationDescription": "rrrrr"
-      },
-      {
-        "City": "assdgf",
-        "StartDate": "2022-05-24T21:48:12.511Z",
-        "EndDate": "2022-05-24T21:48:12.511Z",
-        "LocationDescription": "string"
       }
     ]
   },
   {
-    "PatientId": "4",
-    "Name": "Rivka",
+    "PatientId": "5",
+    "Name": "Gad Gad",
     "Locations": [
       {
         "City": "Jerusalem",
-        "StartDate": "2021-01-01T10:10:10",
-        "EndDate": "2021-01-01T10:50:10",
-        "LocationDescription": "Central station"
+        "StartDate": "2022-05-26T10:50:25.531Z",
+        "EndDate": "2022-05-26T10:50:25.531Z",
+        "LocationDescription": "Centeral station"
       },
       {
-        "City": "Bne Brak",
-        "StartDate": "2021-01-02T10:10:10",
-        "EndDate": "2021-01-02T10:50:10",
-        "LocationDescription": "Rabbi Akiva"
-      },
-      {
-        "City": "Elad",
-        "StartDate": "2021-01-03T10:10:10",
-        "EndDate": "2021-01-03T10:50:10",
-        "LocationDescription": "Nachlat Yzhak"
-      },
-      {
-        "City": "Tel Aviv",
-        "StartDate": "2021-01-04T10:10:10",
-        "EndDate": "2021-01-04T10:50:10",
-        "LocationDescription": "Bursa"
+        "City": "Jerusalem",
+        "StartDate": "2022-05-26T10:50:25.531Z",
+        "EndDate": "2022-05-26T10:50:25.531Z",
+        "LocationDescription": "Binyane Hauma"
       }
     ]
   }

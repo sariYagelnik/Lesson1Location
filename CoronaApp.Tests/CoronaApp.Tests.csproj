@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lesson1Location\Locations.Api.csproj" />
+    <ProjectReference Include="..\Lesson1Location\CoronaApp.Api.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Location.Api</RootNamespace>
-    <AssemblyName>Location.Api</AssemblyName>
+    <RootNamespace>CoronaApp.Api</RootNamespace>
+    <AssemblyName>CoronaApp.Api</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +21,10 @@
   <ItemGroup>
     <ProjectReference Include="..\CoronaApp.Services\CoronaApp.Services.csproj" />
     <ProjectReference Include="..\DAL\CoronaApp.Dal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="logs\" />
   </ItemGroup>
 
 </Project>

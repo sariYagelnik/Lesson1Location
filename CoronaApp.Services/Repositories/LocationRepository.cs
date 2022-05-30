@@ -1,4 +1,6 @@
 ﻿using CoronaApp.Services.Models;
+using Serilog;
+using Serilog.Events;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,33 +16,37 @@ namespace CoronaApp.Services.Repositories
         private readonly List<Patient> _patients;
         public LocationRepository(IDB patientContext)
         {
-            _patients =patientContext.Patients;
+            _patients = patientContext.Patients;
+            Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Information()
+            .WriteTo.Console(LogEventLevel.Information)
+            .WriteTo.File("logs/logs.txt", rollingInterval: RollingInterval.Day, shared: true)
+            .CreateLogger();
         }
 
-        public async Task<IEnumerable<Location>> GetAllLocations()
+        public async Task<IEnumerable<Location>> GetAllLocationsAsync()
         {
+            Log.Information("Locations/GET Get all locations...");
             return await Task.FromResult(_patients.SelectMany(patient => patient.Locations).ToList());
         }
 
-        public async Task<IEnumerable<Location>> GetLocationById(string id)
+        public async Task<IEnumerable<Location>> GetLocationByIdAsync(string id)
         {
-            return await Task.FromResult(_patients.Where(patient => patient.PatientId == id).SingleOrDefault().Locations);
+            return await Task.FromResult(_patients.Where(patient => patient.PatientId == id).FirstOrDefault().Locations);
         }
 
-        public async Task<IEnumerable<Location>> GetLocationsByCity(string city)
+        public async Task<IEnumerable<Location>> GetLocationsByCityAsync(string city)
         {
-            return await Task.FromResult(_patients.SelectMany(patient => patient.Locations).Where(location => location.City == city).ToList());
+            IEnumerable<Location> allLocations = _patients.SelectMany(patient => patient.Locations);
+            return await Task.FromResult(allLocations.Where(location => location.City == city).ToList());
         }
 
-        async public Task<IEnumerable<Location>> CreateLocation(string id, IEnumerable<Location> locations)
+        async public Task<IEnumerable<Location>> CreateLocationAsync(string id, IEnumerable<Location> locations)
         {
-            _patients.Where(patient => patient.PatientId == id).SingleOrDefault().Locations.AddRange(locations);
-            string patientContext = JsonSerializer.Serialize(_patients, new JsonSerializerOptions() { WriteIndented = true });
-            using (StreamWriter outputFile = new StreamWriter("data.json"))
-            {
-                outputFile.WriteLine(patientContext);
-            }
+            _patients.Where(patient => patient.PatientId == id).SingleOrDefault()?.Locations.AddRange(locations);
+            JsonHelper.WriteObjectToJsonFile(_patients, "data.json");
             return await Task.FromResult(locations);
         }
+
     }
 }
